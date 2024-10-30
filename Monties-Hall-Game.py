@@ -1,13 +1,13 @@
 #Verifying Monty Hall's Theorem
 
 import random
-a=random.randint(1,3)
+prize=random.randint(1,3)
 guess=int(input('enter Door number you want to bet : '))
 
-#Deciding which Door to reveal
+#Monty Deciding which Door to reveal
 doors=[1,2,3]
 doors.remove(guess)
-if a!=doors[0] :
+if prize!=doors[0] :
     print("oops there is nothing behind ",doors[0], " Door ")
     doors.pop(0)
     
@@ -23,6 +23,6 @@ choice=input("Do you Want to change choice of Door? Y/N  : ")
 if choice=='y' or choice=="Y":
     guess=doors[0]
 
-if guess==a:
+if guess==prize:
     print("you Won!!")
 else : print("Your lost, loser!!")
